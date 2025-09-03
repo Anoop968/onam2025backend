@@ -1,0 +1,92 @@
+{
+  "teamNames": {
+    "teamA": "Team A",
+    "teamB": "Team B"
+  },
+  "teams": {
+    "Team A": 0,
+    "Team B": 0
+  },
+  "games": [
+    {
+      "title": "Vadam Vali",
+      "points": 10,
+      "winner": null
+    },
+    {
+      "title": "Lemon and Spoon",
+      "points": 10,
+      "winner": null
+    },
+    {
+      "title": "Kasara Kali",
+      "points": 10,
+      "winner": null
+    },
+    {
+      "title": "Thetta Pavakka",
+      "points": 10,
+      "winner": null
+    },
+    {
+      "title": "Sujiyile Nule Korkkal",
+      "points": 10,
+      "winner": null
+    },
+    {
+      "title": "Vellam Kudi",
+      "points": 10,
+      "winner": null
+    },
+    {
+      "title": "Theta Malsaram Mulaku",
+      "points": 10,
+      "winner": null
+    },
+    {
+      "title": "Ballon Chavitti Pottikkal",
+      "points": 10,
+      "winner": null
+    },
+    {
+      "title": "Porotta Thetta Malsaram",
+      "points": 10,
+      "winner": null
+    },
+    {
+      "title": "Kuppile Vellom Nirakkal",
+      "points": 10,
+      "winner": null
+    },
+    {
+      "title": "Imavettal",
+      "points": 10,
+      "winner": null
+    },
+    {
+      "title": "Ballon Udhipottical",
+      "points": 10,
+      "winner": null
+    },
+    {
+      "title": "Uriyadi",
+      "points": 10,
+      "winner": null
+    },
+    {
+      "title": "Mittai Perukkal",
+      "points": 10,
+      "winner": null
+    },
+    {
+      "title": "Sundarikku Pottuthodal",
+      "points": 10,
+      "winner": null
+    },
+    {
+      "title": "Thalayana Adi",
+      "points": 10,
+      "winner": null
+    }
+  ]
+}

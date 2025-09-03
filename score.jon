@@ -1,0 +1,20 @@
+{
+  "teams": {
+    "Team A": 0,
+    "Team B": 0
+  },
+  "games": [
+    { "title": "Vadam Vali", "winner": null, "points": 10 },
+    { "title": "Lemon and Spoon", "winner": null, "points": 10 },
+    { "title": "Kasara Kali", "winner": null, "points": 10 },
+    { "title": "Thetta Pavakka Malsaram", "winner": null, "points": 10 },
+    { "title": "Sujiyle Nule Korkkal", "winner": null, "points": 10 },
+    { "title": "Vellam Kudi", "winner": null, "points": 10 },
+    { "title": "Thetta Malsaram Mulaku", "winner": null, "points": 10 },
+    { "title": "Balloon Chavitti Pottikkal", "winner": null, "points": 10 },
+    { "title": "Porotta Thetta Malsaram", "winner": null, "points": 10 },
+    { "title": "Kuppile Vellam Nirakkal", "winner": null, "points": 10 },
+    { "title": "Imavettal Biscuit Thetta", "winner": null, "points": 10 },
+    { "title": "Balloon Udhipottikal", "winner": null, "points": 10 }
+  ]
+}
