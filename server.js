@@ -6,7 +6,13 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+// ✅ Configure CORS for your GitHub Pages frontend
+app.use(cors({
+  origin: ['https://anoop968.github.io'], // Only allow your GitHub Pages frontend
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type']
+}));
+
 app.use(express.json());
 
 // Path to data file
@@ -17,6 +23,7 @@ const DATA_FILE = path.join(__dirname, 'data.json');
 // Ensure the data file exists with initial structure
 function ensureData() {
   if (!fs.existsSync(DATA_FILE)) {
+    console.log('Creating initial data.json file...');
     const initialData = {
       teamNames: { teamA: 'Team A', teamB: 'Team B' },
       teams: { 'Team A': 0, 'Team B': 0 },
@@ -33,7 +40,7 @@ function ensureData() {
         { title: 'Kuppile Vellom Nirakkal', points: 10, winner: null },
         { title: 'Imavettal', points: 10, winner: null },
         { title: 'Ballon Udhipottical', points: 10, winner: null },
-        
+
         // Newly Added Games
         { title: 'Uriyadi', points: 10, winner: null },
         { title: 'Mittai Perukkal', points: 10, winner: null },
@@ -45,10 +52,19 @@ function ensureData() {
   }
 }
 
-// Load data from JSON file
+// Load data from JSON file safely
 function load() {
   ensureData();
-  return JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
+  try {
+    return JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
+  } catch (error) {
+    console.error('Error reading data.json:', error.message);
+    return {
+      teamNames: { teamA: 'Team A', teamB: 'Team B' },
+      teams: { 'Team A': 0, 'Team B': 0 },
+      games: []
+    };
+  }
 }
 
 // Save data to JSON file
@@ -146,7 +162,15 @@ app.post('/api/reset-scores', (req, res) => {
   }
 });
 
+/* -------------------- Optional: Serve frontend -------------------- */
+const frontendPath = path.join(__dirname, 'frontend');
+if (fs.existsSync(frontendPath)) {
+  app.use(express.static(frontendPath));
+  console.log('Serving static frontend files...');
+}
+
 /* -------------------- Start Server -------------------- */
 app.listen(PORT, () => {
-  console.log(`Backend running at http://localhost:${PORT}`);
+  console.log(`✅ Backend running at http://localhost:${PORT}`);
 });
+
